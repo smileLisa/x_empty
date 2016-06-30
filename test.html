@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="box-l"></div>
+    <div class="box-c"></div>
+    <div class="box-r"></div>
+</div>
+<script>
+$(function(){
+    //同步和异步
+    //XMLHttpRequest对象
+    //HTTP请求的方法或动作（get（幂等） 或 post）
+    //请求的地址（URL）
+    //XMLHttpRequest  发送请求 XHR.open("GET","/dsw/web-info",true(同步)【false(异步)】)
+    //XHR.send()
+    //XMLHttpRequest响应请求
+    // readyState:0,请求未初始化
+    var XHR;
+    if(window.XMLHttpRequest){
+        var XHR = new XMLHttpRequest();
+    }else{
+        var XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    appendHtml();
+    function appendHtml(){
+        $.ajax({
+            type:"GET",
+            url:"js/json/json.json",
+            dataType:"jsonp",//跨域解决 jsonp不支持post方法
+            jsonp:"callback",
+            success:function(){
+
+            },
+            error:function(){
+
+            }
+        })
+
+        $.ajax({
+            type:"POST",
+            url:"js/json/json.json",
+            dataType:"json",
+            data:{
+                name:1111,
+                name:2222
+            },
+            success:function(){
+
+            },
+            error:function(){
+
+            }
+        })
+    }
+
+})
+</script>
+</body>
+</html>

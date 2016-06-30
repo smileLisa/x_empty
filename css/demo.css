@@ -1,0 +1,45 @@
+@charset "utf-8";
+*{
+	padding:0;
+	margin:0;
+}
+.selectBox{
+	zoom:1;
+	overflow: hidden;
+	margin:10px;
+}
+.selectBox .inputBox{
+	float: left;
+	position: relative;
+}
+.selectBox .input-text{
+	width: 150px;
+	height: 24px;
+	line-height:24px;
+	padding:0px 26px 0 4px;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+}
+.selectBox .inputBox .empty-btn{
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	cursor: pointer;
+}
+
+
+.buyCar{
+	width: 50px;
+	height: 20px;
+	line-height: 20px;
+	background: #f00;
+}
+.button{
+	clear: both;
+}
+.buyCarCopy{
+	width: 50px;
+	height:20px;
+	line-height: 20px;
+	background:#00f;
+}
